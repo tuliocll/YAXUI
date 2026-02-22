@@ -10,8 +10,6 @@ Runs on **Windows** (x86 & x64), **macOS** (x64 & Apple Silicon) and **Linux** (
 
 **[→ Download the latest release](https://github.com/tuliocll/YAXUI/releases/latest)**
 
----
-
 ![Windows x64](https://img.shields.io/badge/Windows-x64%20%7C%20x86-0078D4?logo=windows)
 ![macOS](https://img.shields.io/badge/macOS-arm64%20%7C%20x64-000000?logo=apple)
 ![Linux](https://img.shields.io/badge/Linux-AppImage-FCC624?logo=linux&logoColor=black)
@@ -34,13 +32,9 @@ Key features:
 
 The queue + UI is really the whole point here. The actual ISO extraction heavy lifting is done entirely by `extract-xiso` - I just built the interface and the job orchestration around it.
 
----
-
 ## Credits
 
 All the hard work of actually extracting Xbox ISOs goes to **[extract-xiso](https://github.com/XboxDev/extract-xiso)** by the XboxDev team. This project is just a GUI wrapper and a job queue on top of their binary.
-
----
 
 ## Tech Stack
 
@@ -50,8 +44,6 @@ All the hard work of actually extracting Xbox ISOs goes to **[extract-xiso](http
 - **[shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)** - component primitives
 - **[v0](https://v0.dev/)** - used to generate the initial UI design/components
 - **[Webpack](https://webpack.js.org/)** - bundler, via [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate)
-
----
 
 ## Running locally
 
@@ -77,8 +69,6 @@ Package for production:
 npm run package
 ```
 
----
-
 ## Roadmap / Known Debt
 
 - [ ] **Make parallel jobs optional** - add a toggle and job count control to the settings modal instead of always running multi-job
@@ -86,15 +76,11 @@ npm run package
 - [ ] **Better error handling** - right now if `extract-xiso` fails for a job, it just marks it as "error" and moves on. It would be nice to capture the error message and display it in the UI.
 - [ ] **Linux and macOS support** - currently only tested on Windows, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
 
----
-
 ## About the author
 
 Built by **Tulio Calil**
 
 - Website: [tuliocalil.com](https://tuliocalil.com/)
-
----
 
 ## License
 
