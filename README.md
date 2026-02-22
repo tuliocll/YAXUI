@@ -1,6 +1,6 @@
 # YAXUI - Yet Another xiso UI
 
-A desktop GUI for converting Xbox ISO files — because using `extract-xiso` via CLI on a boring Sunday afternoon was getting old.
+A desktop GUI for converting Xbox ISO files - because using `extract-xiso` via CLI on a boring Sunday afternoon was getting old.
 
 Runs on **Windows** (x86 & x64), **macOS** (x64 & Apple Silicon) and **Linux** (AppImage).
 
@@ -26,13 +26,13 @@ Drop your Xbox `.iso` files into the queue, set a destination folder, and let it
 
 Key features:
 
-- **Conversion queue** — add multiple ISOs and process them in order
-- **Sequential or parallel conversion** — run jobs one-by-one or in configurable batches
-- **Per-game settings** — enable/disable individual items and set custom output folders per game
-- **Real-time progress** — live feedback per job via IPC between the Electron main process and the renderer
-- **Stop anytime** — cancel the queue mid-run without killing the app
+- **Conversion queue** - add multiple ISOs and process them in order
+- **Sequential or parallel conversion** - run jobs one-by-one or in configurable batches
+- **Per-game settings** - enable/disable individual items and set custom output folders per game
+- **Real-time progress** - live feedback per job via IPC between the Electron main process and the renderer
+- **Stop anytime** - cancel the queue mid-run without killing the app
 
-The queue + UI is really the whole point here. The actual ISO extraction heavy lifting is done entirely by `extract-xiso` — I just built the interface and the job orchestration around it.
+The queue + UI is really the whole point here. The actual ISO extraction heavy lifting is done entirely by `extract-xiso` - I just built the interface and the job orchestration around it.
 
 ---
 
@@ -44,12 +44,12 @@ All the hard work of actually extracting Xbox ISOs goes to **[extract-xiso](http
 
 ## Tech Stack
 
-- **[Electron](https://www.electronjs.org/)** — desktop shell, handles native file dialogs and spawns the `extract-xiso` process
-- **[React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)** — UI layer
-- **[Tailwind CSS v4](https://tailwindcss.com/)** — styling
-- **[shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)** — component primitives
-- **[v0](https://v0.dev/)** — used to generate the initial UI design/components
-- **[Webpack](https://webpack.js.org/)** — bundler, via [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate)
+- **[Electron](https://www.electronjs.org/)** - desktop shell, handles native file dialogs and spawns the `extract-xiso` process
+- **[React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)** - UI layer
+- **[Tailwind CSS v4](https://tailwindcss.com/)** - styling
+- **[shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)** - component primitives
+- **[v0](https://v0.dev/)** - used to generate the initial UI design/components
+- **[Webpack](https://webpack.js.org/)** - bundler, via [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate)
 
 ---
 
@@ -81,10 +81,10 @@ npm run package
 
 ## Roadmap / Known Debt
 
-- [ ] **Make parallel jobs optional** — add a toggle and job count control to the settings modal instead of always running multi-job
-- [ ] **Per-job custom output paths** — allow setting an individual destination folder for each item in the queue, independent of the global output folder
-- [ ] **Better error handling** — right now if `extract-xiso` fails for a job, it just marks it as "error" and moves on. It would be nice to capture the error message and display it in the UI.
-- [ ] **Linux and macOS support** — currently only tested on Windows, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
+- [ ] **Make parallel jobs optional** - add a toggle and job count control to the settings modal instead of always running multi-job
+- [ ] **Per-job custom output paths** - allow setting an individual destination folder for each item in the queue, independent of the global output folder
+- [ ] **Better error handling** - right now if `extract-xiso` fails for a job, it just marks it as "error" and moves on. It would be nice to capture the error message and display it in the UI.
+- [ ] **Linux and macOS support** - currently only tested on Windows, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
 
 ---
 
