@@ -75,12 +75,7 @@ npm run package
 - [ ] **Per-job custom output paths** - allow setting an individual destination folder for each item in the queue, independent of the global output folder
 - [ ] **Better error handling** - right now if `extract-xiso` fails for a job, it just marks it as "error" and moves on. It would be nice to capture the error message and display it in the UI.
 - [ ] **Linux** - currently only tested on Windows and Mac, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
-
-## About the author
-
-Built by **Tulio Calil**
-
-- Website: [tuliocalil.com](https://tuliocalil.com/)
+- [ ] **Migrate to Tauri** - Electron is a bit heavy-handed for this use case, and Tauri would allow for a much smaller app size and better performance. This was built in Electron mainly because of familiarity and speed of development, but a Tauri rewrite is on the table if there's enough interest.
 
 ## License
 
