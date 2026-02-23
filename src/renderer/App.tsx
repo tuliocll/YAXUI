@@ -27,10 +27,6 @@ export default function App() {
     queuedCount,
   } = useGameQueue();
 
-  useEffect(() => {
-    console.log('Games:', games);
-  }, [games]);
-
   return (
     <main className="flex min-h-svh items-center justify-center bg-background">
       <div className="flex h-screen w-full flex-col overflow-hidden bg-card shadow-xl">

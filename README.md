@@ -74,7 +74,7 @@ npm run package
 - [ ] **Make parallel jobs optional** - add a toggle and job count control to the settings modal instead of always running multi-job
 - [ ] **Per-job custom output paths** - allow setting an individual destination folder for each item in the queue, independent of the global output folder
 - [ ] **Better error handling** - right now if `extract-xiso` fails for a job, it just marks it as "error" and moves on. It would be nice to capture the error message and display it in the UI.
-- [ ] **Linux and macOS support** - currently only tested on Windows, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
+- [ ] **Linux** - currently only tested on Windows and Mac, but `extract-xiso` is cross-platform so in theory it should work on other OSes with some tweaks to the file dialogs and process spawning.
 
 ## About the author
 

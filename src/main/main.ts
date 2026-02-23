@@ -40,7 +40,8 @@ function getXisoExePath(): string {
   // Matches the folder layout in assets/extract-xiso/:
   //   win/x32/extract-xiso.exe
   //   win/x64/extract-xiso.exe
-  //   mac/extract-xiso
+  //   mac/arm64/extract-xiso
+  //   mac/x64/extract-xiso (maybe a universal binary in the future? idk)
   //   linux/extract-xiso
   let relativePath: string;
   if (platform === 'win32') {
@@ -49,7 +50,11 @@ function getXisoExePath(): string {
         ? path.join('win', 'x32', 'extract-xiso.exe')
         : path.join('win', 'x64', 'extract-xiso.exe');
   } else if (platform === 'darwin') {
-    relativePath = path.join('mac', 'extract-xiso');
+    console.log('Running on macOS', arch);
+    relativePath =
+      arch === 'arm64'
+        ? path.join('mac', 'arm64', 'extract-xiso')
+        : path.join('mac', 'x64', 'extract-xiso');
   } else {
     relativePath = path.join('linux', 'extract-xiso');
   }
